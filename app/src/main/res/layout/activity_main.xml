@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:id="@+id/layout"
+    tools:context=".MainActivity">
+
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Primer Número"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:layout_below="@+id/modo"
+            android:id="@+id/primer"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/primer"
+            android:background="#C5C5C5"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/modo"
+            android:inputType="number"
+            android:ems="8"
+            android:id="@+id/op1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Segun Número"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:layout_below="@id/primer"
+            android:id="@+id/segundo"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/op1"
+            android:layout_toRightOf="@id/segundo"
+            android:layout_marginLeft="55dp"
+            android:background="#C5C5C5"
+            android:inputType="number"
+            android:ems="8"
+            android:id="@+id/op2"
+            />
+        <RadioGroup
+            android:layout_below="@id/segundo"
+            android:id="@+id/operacion"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Sumar"
+                android:checked="true"
+                android:id="@+id/suma"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Restar"
+                android:id="@+id/resta"
+                />
+
+        </RadioGroup>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/operacion"
+        android:text="CALCULAR"
+        android:id="@+id/btn"
+        android:onClick="calculo"/>
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:text="Modo Nocturno"
+        android:id="@+id/modo"
+        android:onClick="modo"
+        />
+
+</RelativeLayout>
